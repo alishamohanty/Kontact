@@ -20,10 +20,39 @@ const findKontact = (name) => {
       .then( contact => {
         console.info(contact)
         console.info(`${contact.length} matched`)
+        mongoose.connection.close();
       })
   }
+//Update a Contact
+const updateKontact = (name) => {
+  Kontact.update({ _id }, name)
+  .then(contact => {
+    console.info('Contact updated')
+    mongoose.connection.close();  
+  })
+}
+//Remove a Contact
+const removeKontact = (name) => {
+    Kontact.remove({ _id })
+    .then(contact => {
+      console.info('Contact removed')
+      mongoose.connection.close();  
+    })
+  }
+//List all Contacts
+const findAllKontact = () => {
+  Kontact.find()
+    .then(contact => {
+      console.info('All contacts')
+      console.info(`${contact.length} found`)
+      mongoose.connection.close();  
+    })
+}
 //Export Modules
 module.exports = {
   addKontact,
-  findKontact
+  findKontact,
+  updateKontact,
+  removeKontact,
+  findAllKontact
   }

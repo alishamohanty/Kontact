@@ -30,13 +30,14 @@ program
   .version('1.0.0')
   .description('A contact Manager')
 
-// program
-//   .command('add <firstname> <lastname> <contact> <email>')
-//   .alias('a')
-//   .description('Add a contact')
-//   .action((firstname, lastname, contact, email) => {
-//       addKontact({firstname, lastname, contact, email})
-//   })
+program
+  .command('add')
+  .alias('a')
+  .description('Add a contact')
+  .action(() => {
+    prompt(questions).then((answers => addKontact(answers)))
+  })
+
 program
   .command('find <name>')
   .alias('f')
