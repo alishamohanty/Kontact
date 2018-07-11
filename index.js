@@ -24,16 +24,16 @@ const findKontact = (name) => {
       })
   }
 //Update a Contact
-const updateKontact = (name) => {
-  Kontact.update({ _id }, name)
+const updateKontact = (_id, contact) => {
+  Kontact.update({ _id: _id }, contact)
   .then(contact => {
     console.info('Contact updated')
     mongoose.connection.close();  
   })
 }
 //Remove a Contact
-const removeKontact = (name) => {
-    Kontact.remove({ _id })
+const removeKontact = (_id) => {
+    Kontact.deleteOne( {_id: _id} )
     .then(contact => {
       console.info('Contact removed')
       mongoose.connection.close();  

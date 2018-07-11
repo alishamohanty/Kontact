@@ -2,7 +2,10 @@ const program = require('commander')
 const {prompt} = require('inquirer')
 const {
   addKontact,
-  findKontact
+  findKontact,
+  updateKontact,
+  removeKontact,
+  findAllKontact
 } = require('./index')
 const questions = [
     {
@@ -45,6 +48,26 @@ program
   .action((name) => {
       findKontact(name)
   })
-
+program
+  .command('update <_id>')
+  .alias('u')
+  .description('Update a Contact')
+  .action((_id) => {
+    prompt(questions).then((answers => updateKontact(_id, answers)))
+  })
+program
+  .command('remove <_id>')
+  .alias('r')
+  .description('Remove a contact')
+  .action((_id) => {
+      removeKontact(_id)
+  })
+program
+  .command('findall')
+  .alias('fa')
+  .description('Find all the contacts')
+  .action(() => {
+      findKontact()
+  })
 program
   .parse(process.argv)
