@@ -12,18 +12,9 @@ mongoose.connect('mongodb://localhost:27017/kontact', {
 
 //Add a contact
 const addKontact = (contact) => {
-  Kontact.create(contact)
-    .then(contact => {
-    console.info('New Customer Added')
-    db.close()
-  })
-}
-//Find a contact
-const findKontact = (name) => {
-  const search = new RegExp(name, 'i')
-  Kontact.find({$or: [{firstname: search}, {lastname: search}]})
-    .then( contact => {
-      console.info(contact)
-      console.info(`${contact.length} matched`)
+    Kontact.create(contact)
+      .then(contact => {
+      console.info('New Customer Added')
+      db.close()
     })
-}
+  }

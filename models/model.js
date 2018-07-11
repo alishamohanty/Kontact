@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const KontactSchema = new Schema({
-  name: String,
+  firstname: String,
+  lastname: String,
   contact: Number,
   email: String
 })
