@@ -8,6 +8,7 @@ const {
   removeKontact,
   findAllKontact
 } = require('./index')
+console.log('Alluchopa')
 const questions = [
     {
         type: 'input',
