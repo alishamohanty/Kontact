@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A dead simple command line contact manager",
   "preferGlobal": true,
-  "bin": "./commands.js",
+  "bin": {
+    "kontact": "./commands.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
