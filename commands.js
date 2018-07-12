@@ -71,5 +71,12 @@ program
   .action(() => {
       findKontact()
   })
+
+// A Script file atleast takes 3 args, exit with help message if we don't have
+// enough args
+if(process.argv.length < 3) {
+  program.help();
+}
+
 program
   .parse(process.argv)
