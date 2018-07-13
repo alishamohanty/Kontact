@@ -6,25 +6,45 @@ For those who live in the terminal.
 `npm i -g alishamohanty/Kontact`
 ## Usage
 - To get used to the prompt of kontact
-```kontact```
+```
+kontact
+```
 - To add a contact
-```kontact add```
+```
+kontact add
+```
 or
-```kontact a```
+```
+kontact a
+```
 - To find details of a contact from a name
-```kontact find <name>```
+```
+kontact find <name>
+```
 or 
-```kontact f <name>```
+```
+kontact f <name>
+```
 - To update a contact, fetch the id
-```kontact update <_id>```
+```
+kontact update <_id>
+```
 or
-```kontact u <_id>```
+```
+kontact u <_id>
+```
 - To remove a contact, fetch the id after you find the contact
-```kontact remove <_id>```
+```
+kontact remove <_id>
+```
 or
-```kontact r <_id>```
+```
+kontact r <_id>
+```
 - To findall contact
-```kontact fa```
+```
+kontact fa
+```
 
 ## Contributions
 If you find a bug or you'd like to add a feature, feel free to raise an issue or send a pull request!!
