@@ -8,7 +8,6 @@ const {
   removeKontact,
   findAllKontact
 } = require('./index')
-console.log('Alluchopa')
 const questions = [
     {
         type: 'input',
@@ -80,3 +79,4 @@ if(process.argv.length < 3) {
 
 program
   .parse(process.argv)
+
